@@ -155,18 +155,18 @@
   }
 }
 .bg-2{
-  padding-top: 64px;
   .logo{
     width: 189px;
-    height: 194px;
+    height: 258px;
     background: url(../../assets/images/voice/logo.png) no-repeat;
     background-size: 100%;
+    background-position: bottom;
     margin: 0 auto 84px;
 }
 .list{
     padding: 0 32px;
     .line{
-        border-top: 1PX solid #433e71;
+        border-top: 1PX solid rgba(255,255,255,.1);
     }
     .menu{
         line-height: 98px;

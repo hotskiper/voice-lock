@@ -100,7 +100,7 @@ export default {
     }
   },
   created() {
-    this.state = 0;
+    // this.state = 1;
     this.preload()
     this.code = this.$route.query.code
     getUserInfo({
@@ -146,7 +146,7 @@ export default {
       })
     },
     handleTouchEnd(e) {
-      this.btnclass = "success"
+      // this.btnclass = "success"
       this.recording = false
       let self = this
       e.preventDefault()
