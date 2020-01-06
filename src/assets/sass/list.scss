@@ -1,0 +1,61 @@
+@import 'reset';
+.container{
+    height: 100%;
+    color: #fff;
+  }
+.bg{
+    height: 100%;
+    background: url(../../assets/images/voice/bg.png) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    user-select: none;
+    padding-top: 64px;
+}
+
+.logo{
+    width: 189px;
+    height: 194px;
+    background: url(../../assets/images/voice/logo.png) no-repeat;
+    background-size: 100%;
+    margin: 0 auto 84px;
+}
+.list{
+    padding: 0 32px;
+    .line{
+        border-top: 1PX solid #433e71;
+    }
+    .menu{
+        line-height: 98px;
+        font-size: 28px;
+        b{
+            display: block;
+            float: right;
+            width: 14px;
+            height: 98px;
+            background: url(../../assets/images/voice/arrow.png) no-repeat center;
+            background-size: 14px 24px;            
+        }
+        span{
+            vertical-align: middle;
+            padding-left: 8px;
+        }
+        i{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+        }
+        &.menu-1{
+            i{
+                background: url(../../assets/images//voice/icon1.png) no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+        &.menu-2{
+            i{
+                background: url(../../assets/images//voice/icon2.png) no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+    }
+}
