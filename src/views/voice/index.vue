@@ -12,7 +12,11 @@
         </div>
         <div class="tips">{{topTip}}</div>
         <div class="num">{{number}}</div>
-        <div class="wave"></div>
+        <div class="wave">
+          <div class="wave1"></div>
+          <div class="wave2"></div>
+          <div class="wave3"></div>
+        </div>
         <div class="btn" :class="btnclass">
           <div class="bottom-tip">
             <span>{{btnText}}</span>
@@ -23,6 +27,9 @@
             @touchstart="handleTouchStart($event)"
             @touchend="handleTouchEnd($event)"
           ></div>
+          <div class="bak-light" :class="{active: recording}">
+            <div></div>
+          </div>
         </div>
       </div>
       <div v-if="state===1" class="bg bg-2">
@@ -100,7 +107,7 @@ export default {
     }
   },
   created() {
-    // this.state = 1;
+    this.state = 0;
     this.preload()
     this.code = this.$route.query.code
     getUserInfo({
@@ -446,5 +453,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/assets/sass/main.scss";
+@import "~@/assets/sass/main.scss";
 </style>
