@@ -151,11 +151,7 @@
     background-size: 100%;
     height: 294px;
     margin-top: 40px;
-    .wave1{
-      background: url(../../assets/images/voice/wave1.png) no-repeat;
-      background-size: 100%;
-      height: 294px;
-    }
+    
   }
   .progress{
     padding: 32px 24px;
@@ -211,6 +207,20 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes curve {
+  0% {
+    transform: none;
+    stroke-opacity: 0;
+  }
+  50% {
+    transform: rotateX(360deg) ;
+    stroke-opacity: 0.4;
+  }
+  100% {
+    transform: none;
+    stroke-opacity: 0;
   }
 }
 .bg-2{

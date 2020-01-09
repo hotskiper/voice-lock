@@ -107,8 +107,8 @@ export default {
     }
   },
   created() {
-    this.state = 0;
-    this.preload()
+    // this.state = 0;
+    // this.preload()
     this.code = this.$route.query.code
     getUserInfo({
       agentId: base.agentId,
@@ -144,7 +144,7 @@ export default {
     handleTouchStart(e) {
       this.recording = true
       this.btnclass = ""
-      this.btnText = "按住说话"
+      this.btnText = "正在录音..."
       e.preventDefault()
       wx.startRecord({
         fail: function() {
@@ -155,6 +155,7 @@ export default {
     handleTouchEnd(e) {
       // this.btnclass = "success"
       this.recording = false
+      this.btnText = "录音结束"
       let self = this
       e.preventDefault()
       wx.stopRecord({
@@ -352,6 +353,7 @@ export default {
         // 输入的数字不正确
         self.btnclass = "fail"
         self.btnText = "您的语音与数字不一致 请按住重新录制!"
+        self.number = self.randomNumbers()
       }
     },
     // 重设声音锁
