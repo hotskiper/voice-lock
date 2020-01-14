@@ -12,7 +12,7 @@
         </div>
         <div class="tips">{{topTip}}</div>
         <div class="num">{{number}}</div>
-        <div class="wave">
+        <div class="wave" :class="{active: recording}">
           <div class="wave1"></div>
           <div class="wave2"></div>
           <div class="wave3"></div>
